@@ -9,6 +9,11 @@ import ManageTeachers from "./pages/admin/ManageTeachers";
 import ManageCourses from "./pages/admin/ManageCourses";
 import ManageUsers from "./pages/admin/ManageUsers";
 import Settings from "./pages/admin/Settings";
+import StudentLayout from "./pages/student/StudentLayout";
+import StudentDashboard from "./pages/student/StudentDashboard";
+import StudentProfile from "./pages/student/StudentProfile";
+import StudentCourse from "./pages/student/StudentCourse";
+import StudentGrades from "./pages/student/StudentGrades";
 
 const App = () => {
   return (
@@ -23,6 +28,14 @@ const App = () => {
           <Route path="courses" element={<ManageCourses />} />
           <Route path="users" element={<ManageUsers />} />
           <Route path="settings" element={<Settings />} />
+        </Route>
+
+        {/* student routes */}
+        <Route path="/student" element={<StudentLayout />}>
+          <Route index element={<StudentDashboard />} />
+          <Route path="profile" element={<StudentProfile />} />
+          <Route path="courses" element={<StudentCourse />} />
+          <Route path="grades" element={<StudentGrades />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

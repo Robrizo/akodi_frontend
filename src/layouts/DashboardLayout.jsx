@@ -16,6 +16,13 @@ const DashboardLayout = ({ navLinks = [] }) => {
   const activeTab =
     navLinks.find((link) => link.link === location.pathname)?.id || "dashboard";
 
+  const timeBasedGreeting = () => {
+    const currentHour = new Date().getHours();
+    if (currentHour < 12) return "Good Morning!";
+    if (currentHour < 18) return "Good Afternoon!";
+    return "Good Evening!";
+  };
+
   useEffect(() => {
     if (isDark) {
       document.documentElement.classList.add("dark");
@@ -104,6 +111,10 @@ const DashboardLayout = ({ navLinks = [] }) => {
                 >
                   <Menu className="w-6 h-6 dark:text-light-a0" />
                 </button>
+                <div className="hidden sm:block">
+                <h1 className="text-sm text-dark-a0 font-medium dark:text-light-a0">{timeBasedGreeting()}</h1>
+                  <p className="text-sm text-dark-a0/50 dark:text-surface-a30">Welcome back</p>
+                </div>
               </div>
               <div className="flex items-center justify-center gap-x-2 text-gray-600">
                 <button
