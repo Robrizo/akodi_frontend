@@ -54,7 +54,7 @@ const ManageStudents = () => {
         desc={"Manage student records and information"}
       />
 
-      <div className="mt-8 mx-auto">
+      <div className="mt-6 mx-auto">
         <GeneralTable
           tableTitle={"Student List"}
           buttonTitle={"Add Student"}

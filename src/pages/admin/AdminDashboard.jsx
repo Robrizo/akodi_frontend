@@ -18,7 +18,7 @@ const AdminDashboard = () => {
       total: 8,
     },
     {
-      title: "Total Subjects",
+      title: "Total Courses",
       icon: BookOpen,
       total: 16,
     },

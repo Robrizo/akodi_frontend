@@ -54,7 +54,7 @@ const ManageUsers = () => {
         desc={"Manage user accounts and permissions"}
       />
 
-      <div>
+      <div className="mt-6">
         <GeneralTable
           tableTitle={"Users"}
           headers={["User ID", "Name", "Email", "Role", "Status", "Actions"]}

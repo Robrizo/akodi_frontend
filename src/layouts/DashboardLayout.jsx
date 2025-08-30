@@ -34,24 +34,24 @@ const DashboardLayout = ({ navLinks = [] }) => {
   }, [isDark]);
 
   return (
-    <div className="min-h-screen bg-surface-a0 flex dark:bg-surface-dark-a0">
+    <div className="min-h-screen bg-surface-a10 flex dark:bg-surface-dark-a0">
       {/* Sidebar */}
       <aside
         className={`${
           sidebarOpen
             ? "translate-x-0 w-64 fixed"
             : "-translate-x-full w-0 lg:translate-x-0 lg:w-64"
-        } max-h-screen absolute lg:sticky inset-y-0 left-0 top-0 z-[50] bg-surface-a10 shadow-lg transition-all duration-200 ease-in-out overflow-hidden dark:bg-surface-dark-a10`}
+        } max-h-screen absolute lg:sticky inset-y-0 left-0 top-0 z-[50] bg-surface-a0 shadow-lg transition-all duration-200 ease-in-out overflow-hidden dark:bg-surface-dark-a10`}
       >
         <div className="flex items-center justify-between p-4 border- border-gray-30">
-          <div className="text-2xl font-bold">
+          <div className="text-xl font-bold">
             <h1 className="dark:text-light-a0">
               Akodi <span className="text-primary-a0">University</span>
             </h1>
           </div>
           <button
             onClick={() => setSidebarOpen(false)}
-            className="lg:hidden text-gray-600 hover:text-gray-900 cursor-pointer"
+            className="lg:hidden text-dark-a0 cursor-pointer dark:text-light-a0"
           >
             <X className="w-6 h-6" />
           </button>
@@ -101,7 +101,7 @@ const DashboardLayout = ({ navLinks = [] }) => {
       {/* Main Content */}
       <div className="flex-1 lg:ml-0">
         {/* Header */}
-        <header className="sticky top-0 z-10 bg-white shadow-sm border-b border-surface-a30 dark:bg-surface-dark-a10 dark:border-surface-dark-a30">
+        <header className="sticky top-0 z-10 bg-surface-a0 shadow-sm border-b border-surface-a30 dark:bg-surface-dark-a10 dark:border-surface-dark-a30">
           <div className="px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center py-4">
               <div className="flex items-center">
@@ -112,8 +112,12 @@ const DashboardLayout = ({ navLinks = [] }) => {
                   <Menu className="w-6 h-6 dark:text-light-a0" />
                 </button>
                 <div className="hidden sm:block">
-                <h1 className="text-sm text-dark-a0 font-medium dark:text-light-a0">{timeBasedGreeting()}</h1>
-                  <p className="text-sm text-dark-a0/50 dark:text-surface-a30">Welcome back</p>
+                  <h1 className="text-sm text-dark-a0 font-medium dark:text-light-a0">
+                    {timeBasedGreeting()}
+                  </h1>
+                  <p className="text-sm text-dark-a0/50 dark:text-surface-a30">
+                    Welcome back
+                  </p>
                 </div>
               </div>
               <div className="flex items-center justify-center gap-x-2 text-gray-600">

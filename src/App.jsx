@@ -14,6 +14,7 @@ import StudentDashboard from "./pages/student/StudentDashboard";
 import StudentProfile from "./pages/student/StudentProfile";
 import StudentCourse from "./pages/student/StudentCourse";
 import StudentGrades from "./pages/student/StudentGrades";
+import StudentCourseRegister from "./pages/student/StudentCourseRegister";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/student" element={<StudentLayout />}>
           <Route index element={<StudentDashboard />} />
           <Route path="profile" element={<StudentProfile />} />
+          <Route path="register" element={<StudentCourseRegister />} />
           <Route path="courses" element={<StudentCourse />} />
           <Route path="grades" element={<StudentGrades />} />
         </Route>

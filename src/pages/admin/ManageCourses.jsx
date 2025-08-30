@@ -48,7 +48,7 @@ const ManageCourses = () => {
         title={"Course Listing"}
         desc={"Manage course records and information"}
       />
-      <div className="mt-8">
+      <div className="mt-6">
         <GeneralTable
           tableTitle={"Courses"}
           headers={[

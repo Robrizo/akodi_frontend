@@ -32,7 +32,7 @@ const GeneralTable = ({
         </div>
       </div>
 
-      <div className="bg-surface-a10/80 rounded-lg overflow-hidden p-4 dark:bg-surface-dark-a10">
+      <div className="bg-surface-a0 rounded-lg overflow-hidden p-4 dark:bg-surface-dark-a10">
         <div className="overflow-x-auto">
           <div className="flex flex-col md:flex-row md:justify-between mb-4">
             <div className="mb-4 flex max-w-1/2 items-center gap-2">
@@ -64,7 +64,7 @@ const GeneralTable = ({
                 ))}
               </tr>
             </thead>
-            <tbody className="bg-light-a0 divide-y divide-surface-a20 dark:bg-surface-dark-a20 dark:divide-surface-dark-a30">
+            <tbody className="divide-y divide-surface-a20 dark:bg-surface-dark-a20 dark:divide-surface-dark-a30">
               {rows.length === 0 ? (
                 <tr>
                   <td
