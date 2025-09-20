@@ -1,7 +1,7 @@
 import React from "react";
 import DashboardLayout from "@/layouts/DashboardLayout";
 import { Outlet } from "react-router";
-import { BookOpen, Home, Pencil, Scale, User } from "lucide-react";
+import { BookOpen, Home, LockKeyhole, Pencil, Scale, User } from "lucide-react";
 
 const StudentLayout = () => {
   const navLinks = [
@@ -34,6 +34,12 @@ const StudentLayout = () => {
       link: "/student/grades",
       label: "My Grades",
       icon: Scale,
+    },
+    {
+      id: "security",
+      link: "/student/security",
+      label: "Security",
+      icon: LockKeyhole,
     },
   ];
   return (

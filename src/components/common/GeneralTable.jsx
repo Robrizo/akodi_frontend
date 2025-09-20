@@ -52,7 +52,7 @@ const GeneralTable = ({
             </div>
           </div>
           <table className="min-w-full divide-y divide-surface-a20">
-            <thead className="bg-surface-a20 dark:bg-surface-dark-a20">
+            <thead className="bg-surface-a20 dark:bg-surface-dark-a30">
               <tr>
                 {headers.map((header, index) => (
                   <th

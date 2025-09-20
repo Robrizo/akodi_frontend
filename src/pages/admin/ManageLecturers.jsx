@@ -3,10 +3,10 @@ import SectionHeader from "../../components/common/SectionHeader";
 import GeneralTable from "../../components/common/GeneralTable";
 import { Edit, Trash2 } from "lucide-react";
 
-const ManageTeachers = () => {
-  const teachers = [
+const ManageLecturers = () => {
+  const lecturers = [
     {
-      teacherId: "TCH001",
+      lecturerId: "TCH001",
       name: "Mr. James Mwale",
       email: "james.mwale@example.com",
       department: "Mathematics",
@@ -14,7 +14,7 @@ const ManageTeachers = () => {
       dateHired: "2019-03-15",
     },
     {
-      teacherId: "TCH002",
+      lecturerId: "TCH002",
       name: "Mrs. Linda Chirwa",
       email: "linda.chirwa@example.com",
       department: "English",
@@ -22,7 +22,7 @@ const ManageTeachers = () => {
       dateHired: "2020-08-10",
     },
     {
-      teacherId: "TCH003",
+      lecturerId: "TCH003",
       name: "Dr. Patrick Zimba",
       email: "patrick.zimba@example.com",
       department: "Science",
@@ -30,7 +30,7 @@ const ManageTeachers = () => {
       dateHired: "2018-01-25",
     },
     {
-      teacherId: "TCH004",
+      lecturerId: "TCH004",
       name: "Miss Grace Banda",
       email: "grace.banda@example.com",
       department: "History",
@@ -38,7 +38,7 @@ const ManageTeachers = () => {
       dateHired: "2021-05-30",
     },
     {
-      teacherId: "TCH005",
+      lecturerId: "TCH005",
       name: "Mr. Steven Phiri",
       email: "steven.phiri@example.com",
       department: "ICT",
@@ -50,15 +50,15 @@ const ManageTeachers = () => {
   return (
     <div>
       <SectionHeader
-        title={"Teacher Management"}
-        desc={"Manage teacher records and information"}
+        title={"Lecturer Management"}
+        desc={"Manage lecturer records and information"}
       />
       <div className="mt-6 mx-auto">
         <GeneralTable
-          tableTitle={"Teacher List"}
-          buttonTitle={"Add Teacher"}
+          tableTitle={"Lecturer List"}
+          buttonTitle={"Add Lecturer"}
           headers={[
-            "Teacher ID",
+            "Lecturer ID",
             "Name",
             "Email",
             "Department",
@@ -66,30 +66,30 @@ const ManageTeachers = () => {
             "Date Hired",
             "Actions",
           ]}
-          rows={teachers}
-          renderRows={(teacher) => (
+          rows={lecturers}
+          renderRows={(lecturer) => (
             <tr className="hover:bg-surface-a10 dark:hover:bg-surface-dark-a10 dark:text-light-a0/80">
-              <td className="px-6 py-3 font-semibold">{teacher.teacherId}</td>
-              <td className="px-6 py-3">{teacher.name}</td>
-              <td className="px-6 py-3">{teacher.email}</td>
-              <td className="px-6 py-3">{teacher.department}</td>
+              <td className="px-6 py-3 font-semibold">{lecturer.lecturerId}</td>
+              <td className="px-6 py-3">{lecturer.name}</td>
+              <td className="px-6 py-3">{lecturer.email}</td>
+              <td className="px-6 py-3">{lecturer.department}</td>
               <td className="px-6 py-3">
                 <div
                   className={`w-fit px-4 rounded-full font-medium text-xs py-0.5 ${
-                    teacher.status === "Active"
+                    lecturer.status === "Active"
                       ? "text-green-600 bg-green-100"
-                      : teacher.status === "Inactive"
+                      : lecturer.status === "Inactive"
                       ? "text-yellow-600 bg-yellow-100"
                       : "text-red-600 bg-red-100"
                   }`}
                 >
-                  {teacher.status === "active"}
-                  {teacher.status === "inactive"}
-                  {teacher.status.charAt(0).toUpperCase() +
-                    teacher.status.slice(1)}
+                  {lecturer.status === "active"}
+                  {lecturer.status === "inactive"}
+                  {lecturer.status.charAt(0).toUpperCase() +
+                    lecturer.status.slice(1)}
                 </div>
               </td>
-              <td className="px-6 py-3">{teacher.dateHired}</td>
+              <td className="px-6 py-3">{lecturer.dateHired}</td>
               <td className="px-6 py-3">
                 <div className="flex items-center gap-4">
                   <button className="cursor-pointer">
@@ -108,4 +108,4 @@ const ManageTeachers = () => {
   );
 };
 
-export default ManageTeachers;
+export default ManageLecturers;

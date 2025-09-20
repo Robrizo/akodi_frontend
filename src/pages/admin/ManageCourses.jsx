@@ -45,7 +45,7 @@ const ManageCourses = () => {
   return (
     <div>
       <SectionHeader
-        title={"Course Listing"}
+        title={"Course Management"}
         desc={"Manage course records and information"}
       />
       <div className="mt-6">

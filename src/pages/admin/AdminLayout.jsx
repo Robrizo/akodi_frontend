@@ -18,9 +18,9 @@ const Dashboard = () => {
       icon: BookUser,
     },
     {
-      id: "teachers",
-      link: "/admin/teachers",
-      label: "Teachers",
+      id: "lecturers",
+      link: "/admin/lecturers",
+      label: "Lecturers",
       icon: GraduationCap,
     },
     {

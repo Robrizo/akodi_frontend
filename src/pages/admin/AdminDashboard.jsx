@@ -13,7 +13,7 @@ const AdminDashboard = () => {
       total: 230,
     },
     {
-      title: "Total Teachers",
+      title: "Total Lecturers",
       icon: GraduationCap,
       total: 8,
     },
@@ -23,7 +23,7 @@ const AdminDashboard = () => {
       total: 16,
     },
     {
-      title: "Total Classes",
+      title: "Total Programs",
       icon: School,
       total: 5,
     },

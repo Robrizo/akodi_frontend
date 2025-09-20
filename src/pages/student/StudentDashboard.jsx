@@ -13,7 +13,7 @@ import { useNavigate } from "react-router";
 const StudentDashboard = () => {
   const navigate = useNavigate();
   return (
-    <div className="max-w-7xl mx-auto space-y-6">
+    <div className="space-y-6">
       {/* Header Card */}
       <div className="bg-surface-a0 w-full px-4 py-6 rounded-lg shadow-xl dark:bg-surface-dark-a10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
@@ -43,7 +43,7 @@ const StudentDashboard = () => {
             </div>
             <div className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full shadow-md">
               <CircleCheckBig className="w-4 h-4" />
-              <span className="text-sm font-semibold">Active</span>
+              <span className="text-sm font-semibold">Registered</span>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ const StudentDashboard = () => {
               </CardHeader>
             </Card>
             <Card
-              onClick={() => navigate("/student/courses")}
+              onClick={() => navigate("/student/register")}
               className="bg-surface-a10/50 shadow-none hover:text-primary-a0 hover:bg-primary-a0/10 hover:font-medium border-none py-3 hover:border-primary-a0 transition-colors cursor-pointer dark:bg-surface-dark-a20"
             >
               <CardHeader className="flex items-center gap-2">
