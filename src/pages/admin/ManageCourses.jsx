@@ -50,7 +50,10 @@ const ManageCourses = () => {
       />
       <div className="mt-6">
         <GeneralTable
-          tableTitle={"Courses"}
+          tableTitle={"Course List"}
+          buttonTitle={"Add Course"}
+          showAddButton={true}
+          showExportButton={true}
           headers={[
             "Course ID",
             "Name",
@@ -59,7 +62,6 @@ const ManageCourses = () => {
             "Date Created",
             "Actions",
           ]}
-          buttonTitle={"Add Course"}
           rows={courses}
           renderRows={(course) => (
             <tr

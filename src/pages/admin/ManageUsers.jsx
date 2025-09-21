@@ -56,7 +56,9 @@ const ManageUsers = () => {
 
       <div className="mt-6">
         <GeneralTable
-          tableTitle={"Users"}
+          tableTitle={"User List"}
+          showAddButton={true}
+          showExportButton={true}
           headers={["User ID", "Name", "Email", "Role", "Status", "Actions"]}
           rows={users}
           buttonTitle={"Add User"}

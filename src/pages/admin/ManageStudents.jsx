@@ -57,6 +57,8 @@ const ManageStudents = () => {
       <div className="mt-6 mx-auto">
         <GeneralTable
           tableTitle={"Student List"}
+          showAddButton={true}
+          showExportButton={true}
           buttonTitle={"Add Student"}
           headers={[
             "Student ID",

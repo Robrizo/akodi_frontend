@@ -8,6 +8,9 @@ const GeneralTable = ({
   rows,
   renderRows,
   buttonTitle,
+  showAddButton = false,
+  showExportButton = false,
+  showSearch = true,
 }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -23,34 +26,47 @@ const GeneralTable = ({
 
   return (
     <div className="space-y-4">
+      {/* Title + Add Button */}
       <div className="flex justify-between items-center">
-        <div className="text-xl font-medium dark:text-light-a0  ">
+        <div className="text-xl font-medium dark:text-light-a0">
           <h2>{tableTitle}</h2>
         </div>
-        <div>
-          <Button title={`${buttonTitle}`} icon={Plus} />
-        </div>
+        {showAddButton && (
+          <div>
+            <Button title={buttonTitle || "Add"} icon={Plus} />
+          </div>
+        )}
       </div>
 
+      {/* Table */}
       <div className="bg-surface-a0 rounded-lg overflow-hidden p-4 dark:bg-surface-dark-a10">
         <div className="overflow-x-auto">
           <div className="flex flex-col md:flex-row md:justify-between mb-4">
-            <div className="mb-4 flex max-w-1/2 items-center gap-2">
-              <Search className="w-5 h-5 text-dark-a0/50 dark:text-surface-a50" />
-              <input
-                type="search"
-                name="search"
-                id="search"
-                value={searchQuery}
-                onChange={handleSearch}
-                className="px-4 py-1.5 border border-surface-a50 rounded-md dark:bg-surface-dark-a20 dark:text-light-a0"
-                placeholder="Search..."
-              />
-            </div>
-            <div>
-              <Button title={"Export"} icon={Download} />
-            </div>
+            {/* Search Field */}
+            {showSearch && (
+              <div className="mb-4 flex max-w-1/2 items-center gap-2">
+                <Search className="w-5 h-5 text-dark-a0/50 dark:text-surface-a50" />
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  value={searchQuery}
+                  onChange={handleSearch}
+                  className="px-4 py-1.5 border border-surface-a50 rounded-md focus:outline-none focus:ring-1 focus:ring-primary-a0 dark:bg-surface-dark-a20 dark:text-light-a0"
+                  placeholder="Search..."
+                />
+              </div>
+            )}
+
+            {/* Export Button */}
+            {showExportButton && (
+              <div>
+                <Button title="Export" icon={Download} />
+              </div>
+            )}
           </div>
+
+          {/* Table Content */}
           <table className="min-w-full divide-y divide-surface-a20">
             <thead className="bg-surface-a20 dark:bg-surface-dark-a30">
               <tr>
@@ -74,7 +90,7 @@ const GeneralTable = ({
                     No records available
                   </td>
                 </tr>
-              ) : filteredRows.length === 0 ? (
+              ) : filteredRows.length === 0 && showSearch ? (
                 <tr>
                   <td
                     colSpan={headers.length}

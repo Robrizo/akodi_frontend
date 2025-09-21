@@ -60,7 +60,7 @@ const Settings = () => {
             name="name"
             value={profile.name}
             onChange={handleProfileChange}
-            className="mt-1 block w-full md:max-w-md px-2 py-2 border border-surface-a50 rounded-md focus:ring-primary-a0 focus:border-primary-a0 dark:bg-surface-dark-a20 dark:text-light-a0"
+            className="mt-1 block w-full md:max-w-md px-2 py-2 border border-surface-a50 rounded-md focus:outline-none focus:ring-primary-a0 focus:ring-1 dark:bg-surface-dark-a20 dark:text-light-a0"
             placeholder="Your name"
           />
         </div>
@@ -73,7 +73,7 @@ const Settings = () => {
             name="email"
             value={profile.email}
             onChange={handleProfileChange}
-            className="mt-1 block w-full md:max-w-md px-2 py-2 border border-surface-a50 rounded-md focus:ring-primary-a0 focus:border-primary-a0 dark:bg-surface-dark-a20 dark:text-light-a0"
+            className="mt-1 block w-full md:max-w-md px-2 py-2 border border-surface-a50 rounded-md focus:outline-none focus:ring-primary-a0 focus:ring-1 dark:bg-surface-dark-a20 dark:text-light-a0"
             placeholder="you@example.com"
           />
         </div>
@@ -99,7 +99,7 @@ const Settings = () => {
             name="currentPassword"
             value={passwords.currentPassword}
             onChange={handlePasswordChange}
-            className="mt-1 block w-full md:max-w-md px-2 py-2 border border-surface-a50 rounded-md focus:ring-primary-a0 focus:border-primary-a0 dark:bg-surface-dark-a20 dark:text-light-a0"
+            className="mt-1 block w-full md:max-w-md px-2 py-2 border border-surface-a50 rounded-md focus:outline-none focus:ring-primary-a0 focus:ring-1 dark:bg-surface-dark-a20 dark:text-light-a0"
           />
         </div>
         <div>
@@ -111,7 +111,7 @@ const Settings = () => {
             name="newPassword"
             value={passwords.newPassword}
             onChange={handlePasswordChange}
-            className="mt-1 block w-full md:max-w-md px-2 py-2 border border-surface-a50 rounded-md focus:ring-primary-a0 focus:border-primary-a0 dark:bg-surface-dark-a20 dark:text-light-a0"
+            className="mt-1 block w-full md:max-w-md px-2 py-2 border border-surface-a50 rounded-md focus:outline-none focus:ring-primary-a0 focus:ring-1 dark:bg-surface-dark-a20 dark:text-light-a0"
           />
         </div>
         <div>
@@ -123,7 +123,7 @@ const Settings = () => {
             name="confirmPassword"
             value={passwords.confirmPassword}
             onChange={handlePasswordChange}
-            className="mt-1 block w-full md:max-w-md px-2 py-2 border border-surface-a50 rounded-md focus:ring-primary-a0 focus:border-primary-a0 dark:bg-surface-dark-a20 dark:text-light-a0"
+            className="mt-1 block w-full md:max-w-md px-2 py-2 border border-surface-a50 rounded-md focus:outline-none focus:ring-primary-a0 focus:ring-1 dark:bg-surface-dark-a20 dark:text-light-a0"
           />
         </div>
         <div className="mt-4 w-fit">

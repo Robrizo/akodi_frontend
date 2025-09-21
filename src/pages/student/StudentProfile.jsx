@@ -65,7 +65,7 @@ const StudentProfile = () => {
                 className={`px-4 py-2 rounded-md font-medium cursor-pointer ${
                   activeTab === tab.id
                     ? "bg-primary-a0/10 border-b-2 text-primary-a10"
-                    : "text-dark-a0 bg-surface-a10 hover:bg-primary-a0/10 hover:text-primary-a0 dark:text-light-a0"
+                    : "text-dark-a0 bg-surface-a10 hover:bg-primary-a0/10 hover:text-primary-a0 dark:text-light-a0 dark:bg-surface-dark-a20"
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
